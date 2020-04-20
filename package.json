@@ -1,0 +1,23 @@
+{
+  "name": "rust-wasm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-wasm": "cargo build --target wasm32-unknown-unknown",
+    "build-bindgen": "wasm-bindgen target/wasm32-unknown-unknown/debug/rust_wasm_starter.wasm --out-dir rust_dist",
+    "build": "npm run build-wasm && npm run build-bindgen && npx webpack",
+    "serve": "npx serve ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "@babel/core": "^7.9.0",
+    "babel-loader": "^8.1.0",
+    "webpack": "^4.42.1"
+  }
+}

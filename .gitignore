@@ -1,0 +1,10 @@
+# Compilation target directories
+target
+js_dist
+rust_dist
+
+# Vim artifacts
+*.swp
+*.swo
+
+node_modules
